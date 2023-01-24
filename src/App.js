@@ -10,6 +10,17 @@ import Refcomponent from './Refcomponent';
 import Uncontrolledcomponent from './Uncontrolledcomponent';
 import Callbackrefcomponent from './Callbackrefcomponent';
 import Userefcomponent from './Userefcomponent';
+import RouterpracticeComponent from './RouterpracticeComponent';
+// import Comp1 from './Comp1';
+// import Comp2 from './Comp2';
+import { lazy,Suspense } from 'react';
+import Formvalidation from './Formvalidation';
+import FormikForm from './FormikForm';
+import FormikComponent from './FormikComponent';
+import Reactbootstrap from './Reactbootstrap';
+import FetchApi from './FetchApi';
+const Comp1 = lazy(()=> import('./Comp1'))
+const Comp2 = lazy(()=>import('./Comp2'))
 
 export const NameContext = createContext()
 export const Lastname = createContext()
@@ -18,7 +29,7 @@ function App() {
   const human = { name: 'rahul', age: 22, gender: 'male' } //obj
   return (
 
-    <div>
+    <div className='App'>
       {/* //jsx expression */}
       {/* <NameContext.Provider value={'shubham'}>
         <Lastname.Provider value={'byadagi'}>
@@ -32,8 +43,19 @@ function App() {
       {/* <Refcomponent /> */}
       {/* <Uncontrolledcomponent /> */}
       {/* <Callbackrefcomponent /> */}
-      <Userefcomponent />
+      {/* <Userefcomponent /> */}
+      {/* <h1>Lazy loading demo</h1>
+      <Comp1/>
+      <Suspense fallback={<div>loading.....</div>}>
 
+      <Comp2/>
+      </Suspense> */}
+
+      {/* <Formvalidation/> */}
+      {/* <FormikForm/> */}
+      {/* <FormikComponent/> */}
+      {/* <Reactbootstrap/> */}
+      <FetchApi/>
     </div>
 
   );
